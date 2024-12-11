@@ -102,9 +102,9 @@ app.get("/api/movies/:id", async (req, res) => {
 });
 // Endpoint to save movie and credits to MongoDB
 app.post("/api/movies/save", async (req, res) => {
-  const { movie, credits } = req.body;
+  const { movie, credits, play } = req.body;
 
-  if (!movie || !credits) {
+  if (!movie || !credits || !play) {
     return res
       .status(400)
       .json({ error: "Movie and credits data are required" });
@@ -117,6 +117,7 @@ app.post("/api/movies/save", async (req, res) => {
       {
         movie: movie,
         credits: credits,
+        play: play,
       },
       { upsert: true, new: true }
     );
