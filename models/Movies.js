@@ -90,25 +90,71 @@ const MovieWithCreditsSchema = new mongoose.Schema({
       },
     ],
   },
+  javascript
+
+Verify
+
+Open In Editor
+Run
+Copy code
+// VideoQualityModel.js
+
+const mongoose = require('mongoose');
+
+// Define the Play schema
+const PlaySchema = new mongoose.Schema({
   play: {
-    low_quality: [
-      {
-        hindi: { type: String },
-        english: { type: String },
+    language: {
+      hindi: {
+        quality: {
+          '480p': { type: String, required: fals },
+          '720p': { type: String, required: false },
+          '1080p': { type: String, required: false },
+        },
       },
-    ],
-    medium_quality: [
-      {
-        hindi: { type: String },
-        english: { type: String },
+      english: {
+        quality: {
+          '480p': { type: String, required: false },
+          '720p': { type: String, required: false },
+          '1080p': { type: String, required: false },
+        },
       },
-    ],
-    high_quality: [
-      {
-        hindi: { type: String },
-        english: { type: String },
+      french: {
+        quality: {
+          '480p': { type: String, required: false },
+          '720p': { type: String, required: false },
+          '1080p': { type: String, required: false },
+        },
       },
-    ],
+      kannada: {
+        quality: {
+          '480p': { type: String, required: false },
+          '720p': { type: String, required: false },
+          '1080p': { type: String, required: false },
+        },
+      },
+      malayalam: {
+        quality: {
+          '480p': { type: String, required: false },
+          '720p': { type: String, required: false },
+          '1080p': { type: String, required: false },
+        },
+      },
+      tamil: {
+        quality: {
+          '480p': { type: String, required: false },
+          '720p': { type: String, required: false },
+          '1080p': { type: String, required: false },
+        },
+      },
+      telugu: {
+        quality: {
+          '480p': { type: String, required: false },
+          '720p': { type: String, required: false },
+          '1080p': { type: String, required: false },
+        },
+      },
+    },
   },
 });
 
