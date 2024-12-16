@@ -89,6 +89,42 @@ const MovieWithCreditsSchema = new mongoose.Schema({
         job: { type: String },
       },
     ],
+  },
+  play: {
+    low_quality: [
+      {
+        hindi: { type: String, required: false },
+        english: { type: String, required: false },
+        french: { type: String, required: false },
+        kannada: { type: String, required: false },
+        malayalam: { type: String, required: false },
+        tamil: { type: String, required: false },
+        telugu: { type: String, required: false },
+      },
+    ],
+    medium_quality: [
+      {
+        hindi: { type: String, required: false },
+        english: { type: String, required: false },
+        french: { type: String, required: false },
+        kannada: { type: String, required: false },
+        malayalam: { type: String, required: false },
+        tamil: { type: String, required: false },
+        telugu: { type: String, required: false },
+      },
+    ],
+    high_quality: [
+      {
+        hindi: { type: String, required: false },
+        english: { type: String, required: false },
+        french: { type: String, required: false },
+        kannada: { type: String, required: false },
+        malayalam: { type: String, required: false },
+        tamil: { type: String, required: false },
+        telugu: { type: String, required: false },
+      },
+    ],
+  },
 });
 
 module.exports = mongoose.model("Movies", MovieWithCreditsSchema);
