@@ -89,7 +89,6 @@ const MovieWithCreditsSchema = new mongoose.Schema({
         job: { type: String },
       },
     ],
-  },
 });
 
 module.exports = mongoose.model("Movies", MovieWithCreditsSchema);
