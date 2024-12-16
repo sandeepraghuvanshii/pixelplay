@@ -90,19 +90,6 @@ const MovieWithCreditsSchema = new mongoose.Schema({
       },
     ],
   },
-  javascript
-
-Verify
-
-Open In Editor
-Run
-Copy code
-// VideoQualityModel.js
-
-const mongoose = require('mongoose');
-
-// Define the Play schema
-const PlaySchema = new mongoose.Schema({
   play: {
     language: {
       hindi: {
